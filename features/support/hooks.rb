@@ -3,7 +3,7 @@ Before do
   ENV['BROWSER'] = "chrome" if ENV['BROWSER'].nil?
   ENV['WHERE'] = "local" if ENV['WHERE'].nil?
   if(ENV['WHERE']=="remote")
-    @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://localhost:4444/wd/hub"})
+    @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://172.17.0.3:4444/wd/hub"})
   else
     # @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym)
     @browser = Watir::Browser.new ENV['BROWSER'].to_sym
