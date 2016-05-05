@@ -9,12 +9,14 @@ gem 'activesupport', '4.1.8'
 gem 'rake'
 gem 'simplecov'
 gem 'simplecov-rcov'
+gem 'rest-client'
 
 
 # gem to connect to saucelabs and also dynamically change browser parameters
 gem 'saucelabs'
 
 gem 'nokogiri'
+gem 'multipart-post'
 
 
 

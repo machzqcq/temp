@@ -3,7 +3,15 @@ Before do
   ENV['BROWSER'] = "chrome" if ENV['BROWSER'].nil?
   ENV['WHERE'] = "local" if ENV['WHERE'].nil?
   if(ENV['WHERE']=="remote")
-    @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://172.17.0.3:4444/wd/hub"})
+    capabilities = Selenium::WebDriver::Remote::Capabilities.new
+    capabilities.browser_name = ENV['BROWSER']
+
+    @browser = Watir::Browser.new(
+        :remote,
+        :url => "http://172.17.0.3:4444/wd/hub",
+        :desired_capabilities => capabilities
+    )
+    # @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://172.17.0.3:4444/wd/hub"})
   else
     # @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym)
     @browser = Watir::Browser.new ENV['BROWSER'].to_sym
