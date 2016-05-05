@@ -2,6 +2,7 @@ include SauceLabs
 Before do
   ENV['BROWSER'] = "chrome" if ENV['BROWSER'].nil?
   ENV['WHERE'] = "local" if ENV['WHERE'].nil?
+  ENV['SAUCE_GRID_URL'] = ENV['SAUCE_GRID_URL'] || "http://ondemand.saucelabs.com:80/wd/hub"
   if(ENV['WHERE']=="remote")
     capabilities = Selenium::WebDriver::Remote::Capabilities.new
     capabilities.browser_name = ENV['BROWSER']

@@ -1,6 +1,7 @@
 class AutomationHomePage < GenericBasePage
 
-  page_url "http://automationpractice.com"
+  ENV['URL'] = ENV['URL'] || "http://automationpractice.com"
+  page_url ENV['URL']
 
   element(:sign_in) {|b| b.link(text: "Sign in")}
   element(:contact_us) {|b| b.link(text: "Contact us")}
