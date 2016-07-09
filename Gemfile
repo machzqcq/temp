@@ -1,5 +1,8 @@
 source 'http://rubygems.org'
 
+gem 'unf_ext', '0.0.7.2'
+gem 'ffi', '1.9.13'
+gem 'json', '1.8.3'
 gem 'cucumber'
 gem 'rspec'
 gem 'selenium-webdriver'
@@ -15,7 +18,7 @@ gem 'rest-client'
 # gem to connect to saucelabs and also dynamically change browser parameters
 gem 'saucelabs'
 
-gem 'nokogiri'
+gem 'nokogiri', '1.6.8'
 gem 'multipart-post'
 
 
