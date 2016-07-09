@@ -9,7 +9,7 @@ Before do
 
     @browser = Watir::Browser.new(
         :remote,
-        :url => "http://172.17.0.3:4444/wd/hub",
+        :url => ENV['SAUCE_GRID_URL'],
         :desired_capabilities => capabilities
     )
     # @browser = SauceLabs.watir_browser(ENV['BROWSER'].to_sym,{url:"http://172.17.0.3:4444/wd/hub"})
