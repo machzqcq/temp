@@ -14,6 +14,7 @@ gem 'rest-client'
 
 # gem to connect to saucelabs and also dynamically change browser parameters
 gem 'saucelabs'
+gem 'nokogiri', '1.6.8'
 
 
 
