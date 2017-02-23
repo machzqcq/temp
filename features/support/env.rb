@@ -4,7 +4,7 @@ require 'page_helper'
 require 'require_all'
 require 'saucelabs'
 require 'nokogiri'
-require 'active_support/core_ext'
+require 'active_support'
 require 'saucelabs'
 
 require 'active_support/core_ext'
